@@ -96,7 +96,7 @@ public class GSClipboardManager {
         this.listener = listener;
         
         if (mAPI11ClipboardManagerWrapper != null){
-            mAPI11ClipboardManagerWrapper.addPrimaryClipChangedListener(listener);
+            mAPI11ClipboardManagerWrapper.addPrimaryClipChangedListener((ClipboardManager.OnPrimaryClipChangedListener)listener);
         } else if (mAPI1ClipboardManagerWrapper != null){
             
             /* Schedule a task to periodically check the clipboard for changes */
@@ -110,7 +110,7 @@ public class GSClipboardManager {
     public void removeListener(){
                 
         if (mAPI11ClipboardManagerWrapper != null){
-            mAPI11ClipboardManagerWrapper.removePrimaryClipChangedListener(listener);
+            mAPI11ClipboardManagerWrapper.removePrimaryClipChangedListener((ClipboardManager.OnPrimaryClipChangedListener)listener);
         } else if (mAPI1ClipboardManagerWrapper != null){
             executor.shutdown();
         }
@@ -141,7 +141,7 @@ public class GSClipboardManager {
         }
     };
       
-    public interface Listener extends ClipboardManager.OnPrimaryClipChangedListener {
+    public interface Listener {
         
         public void onPrimaryClipChanged();
 
