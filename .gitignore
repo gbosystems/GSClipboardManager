@@ -1,2 +1,22 @@
 
 nbandroid/private.properties
+
+.DS_Store
+
+bin/R.txt
+
+bin/classes.jar
+
+bin/classes/com/gbosystems/android/GSClipboardManager$1.class
+
+bin/classes/com/gbosystems/android/GSClipboardManager.class
+
+*.class
+
+bin/classes/com/gbosystems/android/R$string.class
+
+bin/classes/com/gbosystems/android/R.class
+
+gen/com/gbosystems/android/R.java
+
+gen/R.java.d
